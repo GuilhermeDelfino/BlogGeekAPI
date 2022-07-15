@@ -1,0 +1,12 @@
+server:
+  error:
+    include-stacktrace: on_param
+spring:
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3304/bloggeek?createDatabaseIfNotExist=true
+  jpa:
+    hibernate:
+      ddl-auto: update
