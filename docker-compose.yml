@@ -7,7 +7,7 @@ services:
       MYSQL_PASSWORD_ROOT: root
       MYSQL_ROOT_PASSWORD: root
     ports:
-      - "3304:3304"
+      - "3304:3306"
     volumes:
       - blog_data:/var/lib/mysql
 volumes:
