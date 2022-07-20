@@ -1,4 +1,32 @@
 package br.com.bloggeek.model;
 
-public class User {
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Entity
+@Table(name = "User")
+@Data
+@NoArgsConstructor
+public class User implements Serializable {
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO) // gera id automatico
+    private Long idUser;
+
+    @Column(name="username",nullable = false, length = 45)
+    private String username;
+    @Column(name="email",nullable = false, length = 100)
+    private String email;
+    @Column(name="password",nullable = false, length = 128)
+    private String password;
+    @Column(name="age",nullable = false, length = 3)
+    private int age;
+    @Column(name="cep",nullable = false, length = 3)
+    private int cep;
+    @Column(name="numberAdress",nullable = false, length = 3)
+    private int numberAdress;
 }
+
