@@ -12,6 +12,10 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/")
 public class UserController {
+    @GetMapping("/teste")
+    public String hello(){
+        return "Hello";
+    }
     private final UserRepository userRepository;
 
     public UserController(UserRepository userRepository) {
