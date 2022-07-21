@@ -8,6 +8,7 @@ import lombok.Data;
 public class UserRs {
     public static  UserRs converter(User p){
         var user = new UserRs();
+        user.setIdUser(p.getIdUser());
         user.setUsername(p.getUsername());
         user.setEmail(p.getEmail());
         user.setAge(p.getAge());
@@ -16,6 +17,8 @@ public class UserRs {
         user.setNumberAdress(p.getNumberAdress());
         return user;
     }
+    private long idUser;
     private String username,email,password;
     private int age,cep,numberAdress;
+
 }
